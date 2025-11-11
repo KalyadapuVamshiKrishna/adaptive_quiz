@@ -1,7 +1,7 @@
 // src/api/quizApi.ts
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api/quizzes";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://adaptive-quiz-api.onrender.com/api/quizzes";
 
 const API = axios.create({
   baseURL: "http://localhost:5000/api/quizzes",
@@ -52,7 +52,7 @@ export const getNextAwarenessCard = async (sessionState: any) => {
 
 export async function fetchQuestionByRating(flashcardId: string, rating: number) {
   const response = await fetch(
-    `http://localhost:5000/api/quizzes/flashcards/${flashcardId}/questions/by-rating`,
+    `${BASE_URL}/flashcards/${flashcardId}/questions/by-rating`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
