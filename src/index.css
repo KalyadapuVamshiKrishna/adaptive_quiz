@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Futuristic Blue/Deep-Blue Quiz Theme - All colors in HSL */
+
+@layer base {
+  :root {
+    /* Core Color Palette */
+    --primary-blue: 217 91% 60%; /* #2563EB */
+    --deep-blue: 220 72% 10%; /* #0A1128 */
+    --accent-cyan: 186 94% 56%; /* #22D3EE */
+    --bg-black: 0 0% 0%; /* #000000 */
+    --white: 0 0% 100%; /* #FFFFFF */
+    
+    /* Text Colors */
+    --text-light: 216 33% 91%; /* #E2E8F0 */
+    --text-dark: 217 33% 15%; /* #1E293B */
+    --text-body: 215 20% 65%; /* #CBD5E1 */
+    --text-helper: 215 14% 41%; /* #64748B */
+    
+    /* Semantic Tokens */
+    --background: var(--bg-black);
+    --foreground: var(--text-light);
+    
+    --card: 220 72% 10%;
+    --card-foreground: var(--text-light);
+    
+    --popover: 220 72% 10%;
+    --popover-foreground: var(--text-light);
+    
+    --primary: var(--primary-blue);
+    --primary-foreground: var(--white);
+    
+    --secondary: 217 33% 17%; /* Deep blue variant */
+    --secondary-foreground: var(--text-light);
+    
+    --muted: 217 33% 17%;
+    --muted-foreground: var(--text-body);
+    
+    --accent: var(--accent-cyan);
+    --accent-foreground: var(--deep-blue);
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: var(--white);
+    
+    --success: 142 76% 56%; /* #4ADE80 */
+    --warning: 38 92% 50%; /* #FBBF24 */
+    
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: var(--accent-cyan);
+    
+    --radius: 1.25rem; /* 20px */
+    
+    /* Gradients */
+    --gradient-blue: linear-gradient(90deg, hsl(222 84% 26%), hsl(217 91% 60%), hsl(199 89% 68%));
+    --gradient-radial: radial-gradient(circle at center, hsl(220 72% 10%), hsl(0 0% 0%));
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
